@@ -45,6 +45,11 @@ steps:
     DEBUG: 1
 
 - task: PublishTestResults@2
-  displayName: 'Publish Test Results **/policies.xml'
+  displayName: 'Publish Policy Results **/policies.xml'
   inputs:
     testResultsFiles: '**/policies.xml'
+
+- task: PublishTestResults@1
+  displayName: 'Publish Vulnerability Results **/vulns.xml'
+  inputs:
+    testResultsFiles: '**/vulns.xml'
