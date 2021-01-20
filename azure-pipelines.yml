@@ -45,11 +45,13 @@ steps:
     DEBUG: 1
 
 - task: PublishTestResults@2
-  displayName: 'Publish Policy Results **/policies.xml'
+  displayName: 'Publish Policy Violation Results **/policies.xml'
   inputs:
     testResultsFiles: '**/policies.xml'
+    testRunTitle: 'Black Duck Policy Violations'
 
 - task: PublishTestResults@1
   displayName: 'Publish Vulnerability Results **/vulns.xml'
   inputs:
     testResultsFiles: '**/vulns.xml'
+    testRunTitle: 'Black Duck Vulnerabilities'
