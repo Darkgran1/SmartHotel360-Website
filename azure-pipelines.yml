@@ -42,6 +42,7 @@ steps:
   env:
     BLACKDUCK_API_TOKEN: $(blackduck.api.token)
     BLACKDUCK_URL: $(blackduck.url)
+    DEBUG: 1
 
 - task: PublishTestResults@2
   displayName: 'Publish Test Results **/policies.xml'
