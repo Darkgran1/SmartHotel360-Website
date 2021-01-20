@@ -38,7 +38,7 @@ steps:
     targetType: 'inline'
     script: |
       curl -s -L https://raw.github.com/matthewb66/detect_rescan/main/detect_rescan.sh > detect_rescan.sh
-      ./detect_rescan.sh --blackduck.trust.cert=true --detect.detector.search.depth=1 --detect.project.name=Azure-SE-DEMO --detect.project.version.name=1.0 --detect.policy.check.fail.on.severities=ALL --report --testxml
+      ./detect_rescan.sh --blackduck.trust.cert=true --detect.detector.search.depth=1 --detect.project.name=Azure-SE-DEMO --detect.project.version.name=1.0 --detect.policy.check.fail.on.severities=MINOR --report --testxml
   env:
     BLACKDUCK_API_TOKEN: $(blackduck.api.token)
     BLACKDUCK_URL: $(blackduck.url)
